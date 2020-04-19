@@ -33,17 +33,22 @@ Cucumber jar files
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+A step by step series on how to get your development environment running
 
 ```
-Go to https://www.eclipse.org/downloads/ to doanload Eclipse
+Go to https://www.eclipse.org/downloads/ to doanload Eclipse. Install it afterwards and navigate to
+the location of the project folder to open it.
 ```
 ```
 Go to http://www.seleniumhq.org/download/ and download the necessary Selenium jar files. At minimum:
+
 -Selenium client needs to be downloaded
+
+After downloading, import the libraries to your project's build path.
 ```
 ```
 Go to  https://mvnrepository.com/ and download the jar files. At minimum the following are required:
+
 -Cobertura code coverage
 -Cucumber-core
 -Cucumber-java
@@ -53,11 +58,15 @@ Go to  https://mvnrepository.com/ and download the jar files. At minimum the fol
 -Hemcrest-core
 -Gherkin
 -Junit
+
+After downloading, import the libraries to your project's build path.
 ```
 
 ## Running the tests
 
 To run the test case, right-click on the Runner.java file and select Run As->JUnit Test.
+
+Depending on your browser preference, comment-out the necessary lines in the Steps.java file.
 
 ## Authors
 
