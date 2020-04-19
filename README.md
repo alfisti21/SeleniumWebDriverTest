@@ -44,7 +44,7 @@ Go to  https://mvnrepository.com/ and download the jar files. At minimum the fol
 -Junit
 ```
 
-##Running the tests
+## Running the tests
 
 To run the test case, right-click on the Runner.java file and select Run As->JUnit Test.
 
