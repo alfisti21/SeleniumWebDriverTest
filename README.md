@@ -1,6 +1,6 @@
 # SeleniumWebDriverTest
 
-Simple automation test using JUnit, Selenium Web Driver. Cucumber integration was used to implement the testing in BDD way.
+Simple automation test using Selenium Web Driver and JUnit. Cucumber integration was used to implement the testing in BDD way.
 
 This automation test performs the following requested steps:
 
