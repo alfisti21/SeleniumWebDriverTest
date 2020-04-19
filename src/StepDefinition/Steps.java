@@ -1,18 +1,11 @@
 package StepDefinition;
 
 import static org.junit.Assert.assertEquals;
-
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.IntStream;
-
 import org.openqa.selenium.By;		
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+//import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
-
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;		
 import cucumber.api.java.en.Then;		
@@ -26,11 +19,11 @@ public class Steps {
     @Given("^Open the browser and launch the website$")				
     public void open_the_browser_and_launch_the_website() throws Throwable							
     {
-    	//Comment out the browser you don't want to use
+    	//Comment out the browser you don't want to use. Don't forget to manage the imports section
     	System.setProperty("webdriver.chrome.driver", "C:\\Users\\alfis\\eclipse-workspace\\chromedriver.exe");
     	//System.setProperty("webdriver.gecko.driver", "C:\\Users\\alfis\\eclipse-workspace\\geckodriver.exe");	
         
-    	//Comment out the browser you don't want to use
+    	//Comment out the browser you don't want to use. Don't forget to manage the imports section
     	driver= new ChromeDriver();
     	//driver= new FirefoxDriver();
     	
