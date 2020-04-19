@@ -88,6 +88,8 @@ public class Steps {
     public static String calculatedNumber(String s) {
     	int sum = 0;
     	
+    	//By adding the if statement we check which operation to perform
+    	//The if statement can be extended to include subtraction, multiplication and division
     	if (s.indexOf("plus") != -1) {
     	String str = s.replaceAll("[^-?0-9]+", " ");
     	int[] numbers = Arrays.stream(str.trim().split(" ")).mapToInt(Integer::parseInt).toArray();
