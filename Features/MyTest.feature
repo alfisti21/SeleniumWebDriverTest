@@ -1,4 +1,4 @@
-Feature: Fill in form and successfully submit
+Feature: Send message to SolarEdge
 
 
 Scenario: Verification of Success message
