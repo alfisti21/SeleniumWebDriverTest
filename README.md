@@ -13,6 +13,8 @@ This automation test performs the following requested steps:
 ```
 Since the objective of the test was only to check that the message returned is the *Successfully submitted*, proper data were chosen in order for the form to be submitted successfully. The test is build in such a way that it can be easily extended to test a collection of data for the various fields by using the *Examples* feature of Gherkin so the individual fields can be tested. In addition, functions could be added to feed the fields with random data each time a test is run.
 
+The code is well commented to explain each functionality.
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
