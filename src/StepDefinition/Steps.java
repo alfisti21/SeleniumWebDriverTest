@@ -40,7 +40,7 @@ public class Steps {
     	driver.findElement(By.id("edit-message-0-value")).sendKeys("How much will it cost to cover 10 square meters of a roof with solar panes?");
     	Select dropdown1 = new Select(driver.findElement(By.id("edit-field-client-address-0-address-country-code--2")));
     	dropdown1.selectByValue("US");
-    	Thread.sleep(2000);
+    	Thread.sleep(1000);
     	driver.findElement(By.xpath("//input[contains(@id, 'edit-field-client-address-0-address-given-name')]")).sendKeys("Angelos");
     	driver.findElement(By.xpath("//input[contains(@id, 'edit-field-client-address-0-address-family-name')]")).sendKeys("Ladopoulos");
     	driver.findElement(By.xpath("//input[contains(@id, 'edit-field-client-address-0-address-address-line1')]")).sendKeys("Street 1");
@@ -53,7 +53,7 @@ public class Steps {
     	
     	driver.findElement(By.id("edit-submit")).click();
     	
-    	Thread.sleep(2000);    	
+    	Thread.sleep(1000);    	
     	
     	message = Utils.getTextNode(driver.findElement(By.xpath("//div[contains(@class, 'alert alert')]")));
     	
