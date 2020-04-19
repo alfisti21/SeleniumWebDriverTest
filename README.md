@@ -38,13 +38,13 @@ Cucumber jar files
 A step by step series on how to get your development environment running
 
 ```
-Go to https://www.eclipse.org/downloads/ to doanload Eclipse. Install it afterwards and navigate to
-the location of the project folder to open it.
+Go to https://www.eclipse.org/downloads/ to doanload Eclipse. Install it afterwards and import
+the project after you download it from GitHub.
 ```
 ```
 Go to http://www.seleniumhq.org/download/ and download the necessary Selenium jar files. At minimum:
 
--Selenium client needs to be downloaded
+-Selenium client (combined) needs to be downloaded
 
 After downloading, import the libraries to your project's build path.
 ```
