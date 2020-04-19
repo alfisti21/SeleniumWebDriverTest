@@ -8,5 +8,5 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(features="Features",glue={"StepDefinition"})						
 public class Runner 				
 {		
-//just a Runner file to initiate the test case following the steps from the .feature file
+//Runner file to initiate the test case following the steps from the .feature file
 }
