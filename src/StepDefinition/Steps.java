@@ -13,6 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;		
 import cucumber.api.java.en.Then;		
 import cucumber.api.java.en.When;	
@@ -22,8 +23,8 @@ public class Steps {
 	WebDriver driver;
 
      
-    @Given("^Open the FireFox and launch the website$")				
-    public void open_the_Firefox_and_launch_the_website() throws Throwable							
+    @Given("^Open the browser and launch the website$")				
+    public void open_the_browser_and_launch_the_website() throws Throwable							
     {
     	//Comment out the browser you don't want to use
     	System.setProperty("webdriver.chrome.driver", "C:\\Users\\alfis\\eclipse-workspace\\chromedriver.exe");
@@ -54,48 +55,26 @@ public class Steps {
     	Select dropdown2 = new Select(driver.findElement(By.name("field_client_address[0][address][administrative_area]")));
     	dropdown2.selectByValue("AL");
     	driver.findElement(By.xpath("//input[contains(@id, 'edit-field-client-address-0-address-postal-code')]")).sendKeys("35004");    	
-    	driver.findElement(By.id("edit-field-number-0-value")).sendKeys(calculatedNumber(driver.findElement(By.id("edit-field-number-wrapper")).getText()));
+    	driver.findElement(By.id("edit-field-number-0-value")).sendKeys(Utils.calculatedNumber(driver.findElement(By.id("edit-field-number-wrapper")).getText()));
     	driver.findElement(By.id("edit-field-phone-0-value")).sendKeys("0682956477");    	
     	
     	driver.findElement(By.id("edit-submit")).click();
     	
     	Thread.sleep(2000);    	
     	
-    	message = getTextNode(driver.findElement(By.xpath("//div[contains(@class, 'alert alert')]")));
+    	message = Utils.getTextNode(driver.findElement(By.xpath("//div[contains(@class, 'alert alert')]")));
     	
     }		
 
     @Then("^Check for Success message$")					
     public void check_for_success_message() throws Throwable 							
     {
-    	System.out.println(message);
     	assertEquals("Successfully submitted", message);
     }	
     
-    //function to get the text for the calculated field
-    public static String getTextNode(WebElement e)
-    {
-        String text = e.getText().trim();
-        List<WebElement> children = e.findElements(By.xpath("./*"));
-        for (WebElement child : children)
-        {
-            text = text.replaceFirst(child.getText(), "").trim();
-        }
-        return text;
+    @And("^Close the browser$")
+    public void close_the_browser() throws Throwable {
+        driver.quit();
     }
     
-    //function that finds the numbers and type of operation to be calculated
-    public static String calculatedNumber(String s) {
-    	int sum = 0;
-    	
-    	//By adding the if statement we check which operation to perform
-    	//The if statement can be extended to include subtraction, multiplication and division
-    	if (s.indexOf("plus") != -1) {
-    	String str = s.replaceAll("[^-?0-9]+", " ");
-    	int[] numbers = Arrays.stream(str.trim().split(" ")).mapToInt(Integer::parseInt).toArray();
-    	sum = IntStream.of(numbers).sum();
-    	}
-    	return String.valueOf(sum);
-    }
-
 }
